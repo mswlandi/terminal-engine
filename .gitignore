@@ -33,6 +33,7 @@
 
 # Main executable
 main
+bin/main
 
 # Vscode
 .vscode/
