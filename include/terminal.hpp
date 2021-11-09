@@ -24,7 +24,7 @@ class Terminal
         void RefreshTerminal();
         void ClearTerminal();
         void PutCharacter(char ch, sf::Vector2i pos);
-        void DrawSquare(char ch, sf::Vector2i pos, int size);
+        void DrawRectangle(char ch, sf::Vector2i pos, sf::Vector2i size);
         char GetChar(sf::Vector2i pos);
         sf::Vector2i getWindowPosition();
         sf::Vector2i getWindowSize();

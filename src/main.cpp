@@ -44,7 +44,7 @@ int main()
         }
 
         // terminal.PutCharacter('x', charPos);
-        terminal.DrawSquare('X', charPos, 10);
+        terminal.DrawRectangle('X', charPos, {10,5});
 
         // mvprintw(terminal.terminalSize.x / 2, terminal.terminalSize.y / 2, "%d %d", windowSize.x, windowSize.y);
         mvprintw(terminal.terminalSize.x / 2, terminal.terminalSize.y / 2, "%d %d", mouseCharacterPos.x, mouseCharacterPos.y);

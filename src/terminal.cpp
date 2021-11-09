@@ -71,21 +71,21 @@ void Terminal::PutCharacter(char ch, sf::Vector2i pos)
     }
 }
 
-void Terminal::DrawSquare(char ch, sf::Vector2i pos, int size)
+void Terminal::DrawRectangle(char ch, sf::Vector2i pos, sf::Vector2i size)
 {
-    for (int x=pos.x - size/2; x < pos.x + size/2; x++)
+    for (int x = pos.x - size.x/2; x < pos.x + size.x/2 + size.x%2; x++)
     {
-        for (int y=pos.y - size/2; y < pos.y + size/2; y++)
+        for (int y = pos.y - size.y/2; y < pos.y + size.y/2 + size.y%2; y++)
         {
             PutCharacter(ch, { x, y });
         }
     }
 }
 
-char Terminal::GetChar(sf::Vector2i pos)
-{
-    int ch = mvwinch(stdscr, pos.x, pos.y) & A_CHARTEXT;
-}
+// char Terminal::GetChar(sf::Vector2i pos)
+// {
+//     int ch = mvwinch(stdscr, pos.x, pos.y) & A_CHARTEXT;
+// }
 
 sf::Vector2i Terminal::getWindowPosition()
 {
